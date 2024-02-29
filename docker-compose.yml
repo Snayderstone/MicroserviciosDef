@@ -15,7 +15,7 @@ services:
       - mysql_data:/var/lib/mysql
     ports:
       #PuertoHost:PuertoContenedor
-      - '3307:3306'
+      - '3306:3306'
 
   #----------------------MICROSERVICES----------------
   cliente-service:
