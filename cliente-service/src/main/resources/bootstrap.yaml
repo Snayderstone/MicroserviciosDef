@@ -15,6 +15,9 @@ spring:
   cloud:
     config:
       enable: true
-      uri: ${SERVER_CONFIG_URI}
-      username: ${SERVER_CONFIG_USER}
-      password: ${SERVER_CONFIG_PASS}
+      #uri: ${SERVER_CONFIG_URI}
+      #username: ${SERVER_CONFIG_USER}
+      #password: ${SERVER_CONFIG_PASS}
+      uri: http://localhost:8081
+      username: admin
+      password: admin
