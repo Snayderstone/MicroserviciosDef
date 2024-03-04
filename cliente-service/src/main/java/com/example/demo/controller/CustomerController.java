@@ -25,7 +25,8 @@ import java.util.stream.Collectors;
 
 @Slf4j
 @RestController
-@RequestMapping(value="/cliente")
+@RequestMapping(value="/customers")
+@CrossOrigin(origins = "http://localhost:8080") // Allow requests from your Svelte app origin
 public class CustomerController {
 
     @Autowired
@@ -66,6 +67,7 @@ public class CustomerController {
 
     // -------------------Create a Customer-------------------------------------------
 
+    @CrossOrigin(origins = "http://localhost:8080") // Allow requests from your Svelte app origin
     @PostMapping
     public ResponseEntity<Customer> createCustomer(@Valid @RequestBody Customer customer, BindingResult result) {
         log.info("Creating Customer : {}", customer);
